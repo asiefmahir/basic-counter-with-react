@@ -8,7 +8,10 @@ function App() {
 
   return (
     <div className="App">
-      <Counter />
+      {/* <Counter /> */}
+      <BioData
+        name = "Mahir Asief"
+      />
     </div>
   );
 }

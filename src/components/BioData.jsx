@@ -8,6 +8,12 @@
 // {
 //   name: 
 // }
+
+import Interests from './Interests'
+import PersonalInfo from './PersonalInfo'
+import Skills from './Skills'
+
+
 const BioData = (props) => {
   console.log(props)
     return (
@@ -15,57 +21,23 @@ const BioData = (props) => {
         <h2>
           CV of {props.name}
         </h2>
-        <div className="personal-info">
-          <h2>
-            Personal Info:
-          </h2>
-          <p>
-            Mobile: {props.mobile}
-          </p>
-          <p>
-            email: {props.email}
-          </p>
-          <p>
-            LinkedIn: {props.linkedIn}
-          </p>
-          <p>
-            Github: {props.github}
-          </p>
-        </div>
+        <PersonalInfo 
+          mobile = "5345435453435"
+          email = "asiefmahir1@gmail.com"
+          linkedIn = "linkedIn/asiefmahir"
+          github = "github/asiefmahir"
+        />
         <hr />
 
-        <div className="Skills" >
-          <p>
-            My skills:
-          </p>
-          <ul>
-            {/* <li>JS</li>
-            <li>React</li>
-            <li>Node</li>
-            <li>WP</li>
-            <li>PHP</li> */}
-            {props.skills.map(skill => (
-              <li>
-                {skill}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className = "interests" >
-          <h2>My Interests:</h2>
-          <ul>
-            {/* <li>DS ALGO</li>
-            <li>GoLang</li>
-            <li>Java Springboot</li> */}
-            {props.interests.map(interest => (
-              <li>
-                {interest}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <Skills 
+          skills = {["js", "react"]}
+        
+        />
+        <Interests 
+          interests = {["Ds Algo", "System Design"]}
+        />
         <p>
-          {props.demo.title}
+          {/* {props.demo.title} */}
         </p>
       </div>
     )
